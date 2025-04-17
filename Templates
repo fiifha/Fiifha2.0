@@ -1,0 +1,14 @@
+Fiifha - Cerca nel web
+
+  Cerca
+{% if results %}
+Risultati:
+
+{% for r in results %}
+{{ r.title }}
+{{ r.snippet }}
+{% endfor %}
+{% elif query %}
+Nessun risultato trovato per "{{ query }}"
+
+{% endif %}
